@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Homepage
+{% endblock title %}
+
+
+{% block content %}
+  {% for book in object_list %}
+  <ul>
+    <li>Title: {{ book.title }}</li>
+    <li>Subtitle: {{ book.subtitle }}</li>
+    <li>Author: {{ book.author }}</li>
+    <li>ISBN: {{ book.isbn }}</li>
+  </ul>
+  {% endfor %}
+{% endblock content %}
